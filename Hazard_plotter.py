@@ -739,9 +739,9 @@ for threshold in thres_list:
         #log value first before, causes probs otherwise
         blank=np.arange(0,len(xcos))
         #path to file containing data
-        np.savetxt('coordinates_haz.dat',np.c_[blank,ycos,xcos])
+        np.savetxt('data/coordinates_haz.dat',np.c_[blank,ycos,xcos])
         
-        df_c = mpl.inputs.read_coordinates('coordinates_haz.dat', 
+        df_c = mpl.inputs.read_coordinates('data/coordinates_haz.dat', 
                                    lon_head = 'lon',
                                    lat_head = 'lat'
                                    )
