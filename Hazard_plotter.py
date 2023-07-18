@@ -674,7 +674,7 @@ for threshold in thres_list:
         if mode=='max':
             plt.title(label+' Normalised Max')
 
-        plt.savefig(r"C:\Users\johnn\OneDrive\Documents\MagIE\MagIE Images/summary"+str(kp)+str(save_no)+'_'+str(k)+'.png',bbox_inches='tight')
+        plt.savefig(folder2+"Basemap_"+str(kp)+str(save_no)+'_'+str(k)+'.png',bbox_inches='tight')
         #plt.close()
         
         fig=plt.figure()
