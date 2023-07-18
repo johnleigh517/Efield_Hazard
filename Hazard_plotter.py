@@ -262,32 +262,31 @@ for threshold in thres_list:
     leng=0
     for site in sites:
         print(site)
-        gals=[gal]
-
+        gals=[gal]	
         for gal in gals:
-            folder1=r'C:\Users\johnn\Downloads\Geo_Electrics\out/'
+            #folder1=r'C:\Users\johnn\Downloads\Geo_Electrics\out/'
             string1='_'+field1+'_25.dat'
             
             string2='_'+field2+'_25.dat'
             if gal=='yes': #not galvanic correctred
-                folder1=r'C:\Users\johnn\Downloads\Save\gal/'
+                #folder1=r'C:\Users\johnn\Downloads\Save\gal/'
                 string1=field1+'.dat'
                 string2=field2+'.dat'
                 
             if field1=='Bx' or field2=='By':
-                folder1=r'C:\Users\johnn\Downloads\Geo_Electrics\in\data\25_years/'
+                #folder1=r'C:\Users\johnn\Downloads\Geo_Electrics\in\data\25_years/'
                 string1='_bx_c.txt'
                 string2='_by_c.txt'
             print('Loading Ex')
             Ex=np.loadtxt(folder1+site+string1,usecols=[0])
             print('Loading Ey')
             Ey=np.loadtxt(folder1+site+string2,usecols=[0])
-            time_folder=r'C:\Users\johnn\Downloads\Time_v2.txt'
+            time_folder=folder1+'Time_v2.txt'
             print('Loading Hour data')
             hour=np.loadtxt(time_folder,usecols=3)
             print('Loading Kp data')
             
-            kp_data=np.loadtxt(r'C:\Users\johnn\Downloads/Geo_Electrics\in\Kp_ap_since_1932.txt',skiprows=172401,usecols=[7])
+            kp_data=np.loadtxt(folder1+'Kp_ap_since_1932.txt',skiprows=172401,usecols=[7])
             
             #Getting rid of padding at edge of series
             if gal=='no':
